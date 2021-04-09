@@ -22,5 +22,6 @@ export async function getStaticProps({ preview }) {
     };
   } catch (err) {
     console.error(`Error fetching products on homepage:\n${err}`);
+    return { props: { products: [] } }
   }
 }
